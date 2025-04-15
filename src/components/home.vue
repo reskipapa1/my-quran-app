@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import bgImage from "@/assets/quran.jpg"; // ⬅️ Import gambar
 
 const router = useRouter();
 const searchQuery = ref("");
@@ -41,7 +42,7 @@ const searchQuran = async () => {
 <template>
   <div
     class="relative min-h-screen bg-cover bg-center"
-    style="background-image: url('/src/assets/quran.jpg')"
+    :style="`background-image: url(${bgImage})`"
   >
     <div class="min-h-screen p-6 flex flex-col items-center text-green-900">
       <!-- Konten utama -->
